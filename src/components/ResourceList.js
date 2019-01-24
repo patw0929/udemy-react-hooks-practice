@@ -14,7 +14,9 @@ export default ({ resource }) => {
 
   return (
     <div>
-      {resources.length}
+      {resources.map(record => {
+        return <li key={record.id}>{record.title}</li>;
+      })}
     </div>
   );
 }
